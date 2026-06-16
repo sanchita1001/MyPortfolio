@@ -253,7 +253,7 @@ const Hero = () => {
             </div>
 
             <span className="absolute z-10 w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-            <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+            <span className="absolute w-px left-0 h-[20%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
 
             <div className="relative z-10 h-full w-full flex flex-col gap-4">
               <div className="flex flex-col md:flex-row items-center justify-between gap-3">
@@ -289,7 +289,7 @@ const Hero = () => {
                 <AnimatedCursor text="Hi" classNameDiv="relative md:static" />
               </div>
 
-              <div className="flex flex-col gap-3 mt-auto">
+              <div className="flex flex-col gap-3 mt-auto h-[100px]">
                 <p className="text-lg md:text-2xl lg:text-3xl font-bold text-primary dark:text-white leading-tight">
                   Computer Engineering Student
                   <br />
@@ -297,7 +297,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <Meteors number={10} />
+            <Meteors number={30} />
           </div>
         </motion.div>
 
