@@ -260,8 +260,8 @@ const Hero = () => {
                 <div className="btn_group flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                   <a
                     aria-label="download cv"
-                    href="https://drive.google.com/drive/folders/191j6y4c-BGXbQJD_Lp5nZW7JnGIe2NDS?usp=sharing"
-                    target="_blank"
+                    href="/Resume-Sanchita-Jain_.pdf"
+                    download="Resume Sanchita Jain.pdf"
                     className="cv shadow-[0_10px_40px_rgba(112,67,236,0.3)] bg-[#7043EC] text-white font-bold flex items-center justify-center px-6 py-4 rounded-2xl gap-3 text-lg hover:scale-105 transition-transform"
                   >
                     <FiDownloadCloud className="text-xl" />

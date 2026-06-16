@@ -49,8 +49,8 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-semibold text-textSecondary uppercase tracking-widest">Email</span>
-                    <a href="mailto:sjain7be24@thapar.edu" className="text-lg md:text-xl font-bold text-textPrimary dark:text-white hover:text-primary transition-colors break-all">
-                      sjain7be24@thapar.edu
+                    <a href="mailto:sanchitajain1001@gmail.com" className="text-lg md:text-xl font-bold text-textPrimary dark:text-white hover:text-primary transition-colors break-all">
+                      sanchitajain1001@gmail.com
                     </a>
                   </div>
                 </motion.div>
@@ -110,12 +110,21 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right Side: Contact Form */}
+            {/* Right Side: Contact CTA */}
             <div className="w-full lg:w-3/5">
-               <div className="p-8 md:p-12 rounded-[2.5rem] bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 relative overflow-hidden">
+               <div className="p-8 md:p-12 rounded-[2.5rem] bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 relative overflow-hidden h-full flex flex-col justify-center">
                   <div className="relative z-10">
-                    <h2 className="text-3xl font-bold text-primary dark:text-white mb-8">Send a Message</h2>
-                    <ContactForm />
+                    <h2 className="text-3xl font-bold text-primary dark:text-white mb-6">Send us an email</h2>
+                    <p className="text-lg text-textSecondary dark:text-gray-400 mb-8">
+                      I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                    </p>
+                    <a 
+                      href="mailto:sanchitajain1001@gmail.com"
+                      className="inline-flex items-center gap-3 px-8 py-4 bg-[#7043EC] text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-transform text-lg"
+                    >
+                      <HiOutlineMail className="text-2xl" />
+                      Email Me
+                    </a>
                   </div>
                   {/* Decorative background blur */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
