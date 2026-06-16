@@ -305,7 +305,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-3 sm:mt-3 md:mt-0 lg:mt-0 min-h-[260px] md:min-h-[300px] lg:h-auto overflow-hidden"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-3 sm:mt-3 md:mt-0 lg:mt-0 h-[220px] md:h-[250px] lg:h-auto overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -330,7 +330,7 @@ const Hero = () => {
               <h1 className="text-xl md:text-2xl font-medium">Tools and Tech I daily use</h1>
             </div>
 
-            <div className="flex-grow flex flex-col justify-center gap-5">
+            <div className="flex-grow flex flex-col justify-center gap-3">
               <CustomMarquee direction="right">
                 <div className="flex gap-6 last:ml-6">
                   {skills.slice(0, 6).map((skill, index) => (
@@ -339,7 +339,7 @@ const Hero = () => {
                 </div>
               </CustomMarquee>
               <CustomMarquee direction="left">
-                <div className="flex gap-4 last:ml-6">
+                <div className="flex gap-6 last:ml-6">
                   {skills.slice(6, 12).map((skill, index) => (
                     <div key={index} className="p-5 rounded-xl border border-opacity-20 border-blue-500/40 "><skill.icon className="w-14 h-14 opacity-50" /></div>
                   ))}
