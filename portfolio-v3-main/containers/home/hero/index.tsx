@@ -54,12 +54,12 @@ const Typewriter = ({ text }: { text: string }) => {
 const Hero = () => {
   return (
     <React.Fragment>
-     <div id="hero" className="max-w-[1100px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row">
+     <div id="hero" className="max-w-[1000px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-5 lg:gap-5 grid-flow-row">
         <motion.div
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-3xl p-6 md:p-8 flex flex-col gap-6 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
+          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-2xl p-4 md:p-5 flex flex-col gap-6 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -82,7 +82,7 @@ const Hero = () => {
           <div className="relative z-10 h-full w-full">
             <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-            <div className="image relative h-[300px] md:h-[400px] w-full ">
+            <div className="image relative h-[220px] md:h-[280px] w-full ">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ rotate: 180, scale: 1 }}
@@ -144,7 +144,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               className="title mt-3"
             >
-              <h1 className="text-3xl md:text-4xl ">
+              <h1 className="text-2xl md:text-3xl ">
                 <span className="font-medium text-textSecondary titleFont">
                   hey, I'm
                 </span>{' '}
@@ -185,7 +185,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-4 md:p-6 flex flex-col row-span-1 lg:row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
+          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-4 md:p-6 flex flex-col row-span-1 lg:row-span-2 mt-3 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -305,7 +305,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[280px] md:h-[320px] lg:h-auto overflow-hidden"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-3 sm:mt-3 md:mt-0 lg:mt-0 h-[220px] md:h-[250px] lg:h-auto overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -334,7 +334,7 @@ const Hero = () => {
               <CustomMarquee direction="right">
                 <div className="flex gap-6 last:ml-6">
                   {skills.slice(0, 6).map((skill, index) => (
-                    <div key={index} className="p-5 rounded-xl border border-opacity-20 border-blue-500/40"><skill.icon className="w-14 h-14 opacity-50" /></div>
+                    <div key={index} className="p-3 rounded-xl border border-opacity-20 border-blue-500/40"><skill.icon className="w-10 h-10 opacity-50" /></div>
                   ))}
                 </div>
               </CustomMarquee>

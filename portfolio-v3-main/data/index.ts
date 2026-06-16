@@ -21,6 +21,10 @@ export const menuData = [
     link: '/#projects'
   },
   {
+    name: 'Achievements',
+    link: '/about#achievements'
+  },
+  {
     name: 'Contact',
     link: '/#contact'
   }

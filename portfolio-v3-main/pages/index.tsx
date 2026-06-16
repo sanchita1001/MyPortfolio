@@ -4,6 +4,7 @@ import About from '@/containers/home/about';
 import Education from '@/containers/home/education';
 import Work from '@/containers/home/work';
 import Contact from '@/containers/home/contact';
+import Achievement from '../containers/about/acheivement';
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Education />
       <Work />
+      <Achievement/>
       <Contact />
     </main>
   );
