@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: normal;
+  font-size: 18px;
+}
+
+.titleFont {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bolder;
+  letter-spacing: -2px;
+}
+
+.marq {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+$path-length: 1000.2890625px;
+$size: 10rem;
+$bg: #fff;
+$text-color: rgba(#000, 0.8);
+
+.mySvg {
+  width: $size;
+  animation: move 1s ease forwards 1.5s;
+  path {
+    fill: none;
+    stroke: rgba($text-color, 0.2);
+    stroke-width: 12.5;
+    z-index: 2;
+    &.track {
+      stroke: $text-color;
+      stroke-dashoffset: $path-length;
+      stroke-dasharray: $path-length;
+      stroke-linecap: round;
+      animation: anim 5s ease forwards;
+      @keyframes anim {
+        0% {
+          stroke-dashoffset: $path-length;
+        }
+        100% {
+          stroke-dashoffset: $path-length * 2;
+        }
+      }
+    }
+  }
+}
