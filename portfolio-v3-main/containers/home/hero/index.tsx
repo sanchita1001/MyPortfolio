@@ -59,7 +59,7 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-3xl p-8 md:p-12 flex flex-col gap-8 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
+          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-3xl p-6 md:p-8 flex flex-col gap-6 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -82,7 +82,7 @@ const Hero = () => {
           <div className="relative z-10 h-full w-full">
             <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-            <div className="image relative h-[400px] md:h-[550px] w-full ">
+            <div className="image relative h-[300px] md:h-[400px] w-full ">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ rotate: 180, scale: 1 }}
@@ -94,8 +94,8 @@ const Hero = () => {
                 className="absolute top-5 left-5 z-10"
               >
                 <svg
-                  width="80"
-                  height="80"
+                  width="60"
+                  height="60"
                   viewBox="0 0 200 200"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +142,7 @@ const Hero = () => {
               transition={{ duration: 1.5, delay: 0.2 }}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="title mt-5"
+              className="title mt-3"
             >
               <h1 className="text-3xl md:text-4xl ">
                 <span className="font-medium text-textSecondary titleFont">
@@ -153,29 +153,29 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            <hr />
+            <hr className="my-2" />
 
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="contact-info flex flex-col gap-3 text-sm md:text-base"
+              className="contact-info flex flex-col gap-2 text-sm md:text-base"
             >
               <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-base md:text-lg">📧</span>
-                <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors">sjain7be24@thapar.edu</a>
+                <span className="text-base">📧</span>
+                <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors text-xs md:text-sm">sjain7be24@thapar.edu</a>
               </div>
               <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-base md:text-lg">📱</span>
-                <span>+91-7982750061</span>
+                <span className="text-base">📱</span>
+                <span className="text-xs md:text-sm">+91-7982750061</span>
               </div>
               <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-base md:text-lg">💼</span>
-                <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn Profile</a>
+                <span className="text-base">💼</span>
+                <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs md:text-sm">LinkedIn Profile</a>
               </div>
               <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-base md:text-lg">💻</span>
-                <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Profile</a>
+                <span className="text-base">💻</span>
+                <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs md:text-sm">GitHub Profile</a>
               </div>
             </motion.div>
           </div>
@@ -185,7 +185,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-8 md:p-12 flex flex-col row-span-1 lg:row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
+          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-6 md:p-8 flex flex-col row-span-1 lg:row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -255,8 +255,8 @@ const Hero = () => {
             <span className="absolute z-10 w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
 
-            <div className="relative z-10 h-full w-full flex flex-col gap-10">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="relative z-10 h-full w-full flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="btn_group flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                  <a
   href="/Resume-Sanchita-Jain_.pdf"
@@ -289,8 +289,8 @@ const Hero = () => {
                 <AnimatedCursor text="Hi" classNameDiv="relative md:static" />
               </div>
 
-              <div className="flex flex-col gap-6 mt-auto">
-                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-white leading-tight">
+              <div className="flex flex-col gap-4 mt-auto">
+                <p className="text-xl md:text-3xl lg:text-4xl font-bold text-primary dark:text-white leading-tight">
                   Computer Engineering Student
                   <br />
                   <span className="text-textSecondary">Full-Stack Developer</span>
@@ -305,7 +305,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[350px] md:h-[420px] lg:h-auto overflow-hidden"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[280px] md:h-[320px] lg:h-auto overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -326,11 +326,11 @@ const Hero = () => {
           <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all" />
 
           <div className="relative z-10 w-full flex flex-col h-full">
-            <div className="w-full flex items-start p-8">
-              <h1 className="text-2xl md:text-3xl font-medium">Tools and Tech I daily use</h1>
+            <div className="w-full flex items-start p-4 md:p-6">
+              <h1 className="text-xl md:text-2xl font-medium">Tools and Tech I daily use</h1>
             </div>
 
-            <div className="flex-grow flex flex-col justify-center gap-4">
+            <div className="flex-grow flex flex-col justify-center gap-3">
               <CustomMarquee direction="right">
                 <div className="flex gap-6 last:ml-6">
                   {skills.slice(0, 6).map((skill, index) => (
