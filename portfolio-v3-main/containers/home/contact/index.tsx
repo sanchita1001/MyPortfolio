@@ -9,18 +9,18 @@ const Contact = () => {
     <section id="contact">
       <Title title="Contact" />
 
-      <div className="contact_content mt-10 md:mt-20 mb-20 rounded-3xl flex flex-col gap-6 relative ">
-        <h1 className="text-primary text-4xl sm:text-4xl md:text-6xl lg:text-4xl font-bold ">
+      <div className="contact_content mt-12 md:mt-24 mb-24 rounded-3xl flex flex-col gap-8 relative ">
+        <h1 className="text-primary text-5xl sm:text-5xl md:text-7xl lg:text-5xl font-bold ">
           <span className="text-textPrimary dark:text-white font-bold">
             Let's work together on something
           </span>{' '}
           <span className="titleFont dark:text-white">amazing! </span>
         </h1>
 
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-6">
           <a
             href="mailto:sjain7be24@thapar.edu"
-            className="text-white text-2xl sm:text-2xl lg:text-2xl font-bold dark:text-white  bg-[#7043EC] w-80 flex items-center justify-center rounded-md p-4 hover:bg-[#5c38c7] transition-colors"
+            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#7043EC] w-96 flex items-center justify-center rounded-xl p-5 hover:bg-[#5c38c7] transition-colors hover:scale-105 transition-transform"
           >
             Send an Email
           </a>
@@ -29,18 +29,18 @@ const Contact = () => {
             href="https://linkedin.com/in/sanchitajain1001"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl sm:text-2xl lg:text-2xl font-bold dark:text-white  bg-[#0077B5] w-80 flex items-center justify-center rounded-md p-4 hover:bg-[#006399] transition-colors"
+            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#0077B5] w-96 flex items-center justify-center rounded-xl p-5 hover:bg-[#006399] transition-colors hover:scale-105 transition-transform"
           >
             Connect on LinkedIn
           </a>
         </div>
 
-        <div className="contact-details flex flex-col gap-3 mt-5 text-textPrimary text-lg">
-          <p className="flex items-center gap-2">
+        <div className="contact-details flex flex-col gap-4 mt-6 text-textPrimary text-xl">
+          <p className="flex items-center gap-3">
             <span className="font-semibold">Phone:</span>
             <a href="tel:+917982750061" className="hover:text-primary">+91-7982750061</a>
           </p>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-3">
             <span className="font-semibold">GitHub:</span>
             <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary">github.com/sanchita1001</a>
           </p>

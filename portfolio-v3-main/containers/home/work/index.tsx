@@ -16,15 +16,15 @@ import { projects } from '@/data/index';
 
 const Work = () => {
   return (
-    <section id="work" className="mt-20">
+    <section id="work" className="mt-28">
       <Title title="Projects" />
 
-      <div className="slider mt-10 md:mt-20 ">
+      <div className="slider mt-12 md:mt-24 ">
         <Swiper
           navigation={true}
           className="mySwiper"
           slidesPerView={2}
-          spaceBetween={30}
+          spaceBetween={40}
           pagination={{
             clickable: true
           }}
@@ -33,7 +33,7 @@ const Work = () => {
             // when window width is >= 320px
             320: {
               slidesPerView: 1,
-              spaceBetween: 20
+              spaceBetween: 30
             },
             // when window width is >= 480px
             480: {
@@ -47,12 +47,12 @@ const Work = () => {
             },
             1000: {
               slidesPerView: 2,
-              spaceBetween: 30
+              spaceBetween: 40
             },
 
             1900: {
               slidesPerView: 2,
-              spaceBetween: 30
+              spaceBetween: 40
             }
           }}
         >

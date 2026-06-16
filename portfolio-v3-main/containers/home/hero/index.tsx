@@ -1,46 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import CustomMarquee from '@/components/Marquee';
-import Marquee from 'react-fast-marquee';
 import MyImg from '@/assets/images/ascii.png';
-import { BsSpotify } from 'react-icons/bs';
-import getNowPlayingItem from '@/utils/spotify';
 import { motion } from 'framer-motion';
 import { FiDownloadCloud } from 'react-icons/fi';
 import { Meteors } from '@/components/Meteors';
-import { Badge } from '@/components/Badge';
 import { skills } from '@/data/index';
 import { AnimatedCursor } from '@/components/Cursor';
 
-const Hero = (props: any): any => {
-  const [loading, setLoading] = useState<any>(true);
-  const [result, setResult] = useState<any>({});
-
-  useEffect(() => {
-    Promise.all([
-      getNowPlayingItem(
-        props.client_id,
-        props.client_secret,
-        props.refresh_token
-      )
-    ]).then((results: any) => {
-      setResult(results[0]);
-      setLoading(false);
-    });
-  });
-
+const Hero = () => {
   return (
     <React.Fragment>
-      <div className="relative mt-0 md:mt-0 lg:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-6 lg:gap-6 grid-flow-row ">
+      <div className="relative mt-0 md:mt-0 lg:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row ">
         <motion.div
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" group border border-grey-200 dark:border-[#27272a] col-span-2 bg-secondary rounded-2xl p-10 flex flex-col gap-6 row-span-3 cursor-pointer dark:bg-darkBg relative"
+          className="group border border-grey-200 dark:border-[#27272a] col-span-2 bg-secondary rounded-3xl p-12 flex flex-col gap-8 row-span-3 cursor-pointer dark:bg-darkBg relative"
         >
           <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
           <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-          <div className="image relative h-[500px] w-full ">
+          <div className="image relative h-[550px] w-full ">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ rotate: 180, scale: 1 }}
@@ -103,7 +83,7 @@ const Hero = (props: any): any => {
             animate={{ opacity: 1, y: 0 }}
             className="title mt-5"
           >
-            <h1 className="text-5xl ">
+            <h1 className="text-6xl ">
               <span className="font-medium text-textSecondary titleFont">
                 hey, I'm
               </span>{' '}
@@ -116,44 +96,30 @@ const Hero = (props: any): any => {
 
           <hr />
 
-          <div className="spotify flex gap-5 items-center flex-row flex-wrap"></div>
-
-          {result?.isPlaying ? (
-            <div className="flex items-start">
-              <span className="inline-flex gap-2 items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700">
-                <BsSpotify className="text-[#1DB954] text-md" />
-
-                <p className="whitespace-nowrap text-sm">Now Playing</p>
-              </span>
+          <div className="contact-info flex flex-col gap-4 text-lg">
+            <div className="flex items-center gap-3 text-textPrimary">
+              <span className="text-xl">📧</span>
+              <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors">sjain7be24@thapar.edu</a>
             </div>
-          ) : null}
-
-          <div className="spotify_widget bg-[#1DB954] px-5 py-3 rounded-2xl flex items-center gap-5">
-            <div className="album">
-              {result?.isPlaying ? (
-                <img
-                  loading="lazy"
-                  className="rounded-full h-8 w-8"
-                  src={result?.albumImageUrl}
-                  alt={result?.album}
-                />
-              ) : (
-                <BsSpotify className="text-white text-2xl" />
-              )}
+            <div className="flex items-center gap-3 text-textPrimary">
+              <span className="text-xl">📱</span>
+              <span>+91-7982750061</span>
             </div>
-            <Marquee>
-              <p className="text-white font-bold">
-                {result?.isPlaying ? result.title : 'Not Listening'} -{' '}
-                {result?.isPlaying ? result.artist : 'Spotify'}
-              </p>
-            </Marquee>
+            <div className="flex items-center gap-3 text-textPrimary">
+              <span className="text-xl">💼</span>
+              <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn Profile</a>
+            </div>
+            <div className="flex items-center gap-3 text-textPrimary">
+              <span className="text-xl">💻</span>
+              <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Profile</a>
+            </div>
           </div>
         </motion.div>
         <motion.div
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl p-10 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden"
+          className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-12 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden"
         >
           <div className="dvg-group absolute -z-0 left-0 bottom-0 hidden md:flex justify-between w-full opacity-30 ">
             <svg
@@ -284,43 +250,41 @@ const Hero = (props: any): any => {
           <span className="absolute z-10 w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
           <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
 
-          <div className="content z-10 flex flex-col gap-5  h-full justify-between ">
+          <div className="content z-10 flex flex-col gap-8 h-full justify-between ">
             <AnimatedCursor
               text="Hi"
               classNameDiv="justify-end absolute bottom-40 right-10 md:right-10 sm:left-10"
             />
-            <p className="text-primary font-bold text-5xl dark:text-white ">
+            <p className="text-primary font-bold text-4xl md:text-5xl lg:text-6xl dark:text-white leading-relaxed">
               Computer Engineering Student, {''}
               <span className="text-textSecondary">Full-Stack Developer</span>, and Cybersecurity Enthusiast passionate about building scalable web applications and organizing technical competitions.
             </p>
-            <div className="btn_group flex flex-col md:flex-row lg:flex-row justify-between gap-4 md:gap-0">
+            <div className="btn_group flex flex-col md:flex-row lg:flex-row gap-6 md:gap-6">
               <a
                 aria-label="download cv"
                 href="https://drive.google.com/drive/folders/191j6y4c-BGXbQJD_Lp5nZW7JnGIe2NDS?usp=sharing"
                 target="_blank"
-                className="cv  shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-medium flex items-center px-6 py-4 md:py-0 lg:py-0 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-lg"
+                className="cv shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-bold flex items-center justify-center px-8 py-5 md:py-4 lg:py-4 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-xl hover:scale-105 transition-transform"
               >
-                <FiDownloadCloud />
+                <FiDownloadCloud className="text-2xl" />
                 Download CV
               </a>
-              <div className="flex gap-4">
-                <a
-                  aria-label="linkedin"
-                  href="https://linkedin.com/in/sanchitajain1001"
-                  target="_blank"
-                  className="cv  shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-medium flex items-center px-6 py-4 md:py-0 lg:py-0 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-lg"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  aria-label="github"
-                  href="https://github.com/sanchita1001"
-                  target="_blank"
-                  className="cv  shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-medium flex items-center px-6 py-4 md:py-0 lg:py-0 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-lg"
-                >
-                  GitHub
-                </a>
-              </div>
+              <a
+                aria-label="linkedin"
+                href="https://linkedin.com/in/sanchitajain1001"
+                target="_blank"
+                className="cv shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-bold flex items-center justify-center px-8 py-5 md:py-4 lg:py-4 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-xl hover:scale-105 transition-transform"
+              >
+                LinkedIn
+              </a>
+              <a
+                aria-label="github"
+                href="https://github.com/sanchita1001"
+                target="_blank"
+                className="cv shadow-[0_10px_50px_rgba(8,_112,_184,_0.7)] bg-primary text-white font-bold flex items-center justify-center px-8 py-5 md:py-4 lg:py-4 rounded-xl gap-4 dark:bg-secondary dark:text-primary text-xl hover:scale-105 transition-transform"
+              >
+                GitHub
+              </a>
             </div>
           </div>
 
@@ -331,33 +295,33 @@ const Hero = (props: any): any => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-3  rounded-2xl p-0  flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[340px] md:h-[340px]  lg:h-auto"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[420px] md:h-[420px] lg:h-auto"
         >
-          <div className="w-full flex items-start p-6">
-            <h1 className=" text-2xl font-medium">Tools and Tech I daily use</h1>
+          <div className="w-full flex items-start p-8">
+            <h1 className="text-3xl md:text-4xl font-medium">Tools and Tech I daily use</h1>
           </div>
 
           <div>
             <CustomMarquee direction="right">
-              <div className="flex gap-5 last:ml-5">
+              <div className="flex gap-6 last:ml-6">
                 {skills.slice(0, 6).map((skill, index) => (
                   <div
                     key={index}
-                    className="p-4 rounded-md border border-opacity-20 border-blue-500/40"
+                    className="p-5 rounded-xl border border-opacity-20 border-blue-500/40"
                   >
-                    <skill.icon className="w-12 h-12 opacity-50" />
+                    <skill.icon className="w-14 h-14 opacity-50" />
                   </div>
                 ))}
               </div>
             </CustomMarquee>
             <CustomMarquee direction="left">
-              <div className="flex gap-5 last:ml-5">
+              <div className="flex gap-6 last:ml-6">
                 {skills.slice(6, 12).map((skill, index) => (
                   <div
                     key={index}
-                    className="p-4 rounded-md border border-opacity-20 border-blue-500/40 "
+                    className="p-5 rounded-xl border border-opacity-20 border-blue-500/40 "
                   >
-                    <skill.icon className="w-12 h-12 opacity-50" />
+                    <skill.icon className="w-14 h-14 opacity-50" />
                   </div>
                 ))}
               </div>
