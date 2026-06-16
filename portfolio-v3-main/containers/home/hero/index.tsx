@@ -11,7 +11,7 @@ import { AnimatedCursor } from '@/components/Cursor';
 const Hero = () => {
   return (
     <React.Fragment>
-      <div className="relative mt-0 md:mt-0 lg:mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row ">
+     <div className="max-w-[1800px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row">
         <motion.div
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
@@ -256,8 +256,8 @@ const Hero = () => {
               classNameDiv="justify-end absolute bottom-40 right-10 md:right-10 sm:left-10"
             />
             <p className="text-primary font-bold text-4xl md:text-5xl lg:text-6xl dark:text-white leading-relaxed">
-              Computer Engineering Student, {''}
-              <span className="text-textSecondary">Full-Stack Developer</span>, and Cybersecurity Enthusiast passionate about building scalable web applications and organizing technical competitions.
+              Computer Engineering Student {''}
+             <div className='mt-5'><span className="text-textSecondary">Full-Stack Developer</span></div> 
             </p>
             <div className="btn_group flex flex-col md:flex-row lg:flex-row gap-6 md:gap-6">
               <a
