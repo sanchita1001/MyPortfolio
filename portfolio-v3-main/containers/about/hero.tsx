@@ -1,5 +1,5 @@
 import React from 'react';
-import { workExperience } from '@/data/index';
+
 
 const AboutHero = () => {
   return (

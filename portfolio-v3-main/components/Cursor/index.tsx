@@ -22,7 +22,7 @@ export const AnimatedCursor: React.FC<{
   <motion.div
     initial={{ translateX: '0', translateY: '0' }}
     animate={{ translateX: ['0', '20px', '0'], translateY: ['0', '40px', '0'] }}
-    transition={{ duration: 4, repeat: Infinity, bounce: true }}
+    transition={{ duration: 4, repeat: Infinity, bounce: 0.5 }}
     className={cn('flex items-center gap-4', classNameDiv)}
   >
     <div
