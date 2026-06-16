@@ -1,21 +1,28 @@
 import { IoLogoJavascript, IoLogoPython } from 'react-icons/io';
 import { FaFigma, FaReact, FaGit, FaNode } from 'react-icons/fa';
-import { SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiPostman, SiVercel, SiCplusplus, SiC } from 'react-icons/si';
+import { SiMongodb, SiPostgresql, SiExpress, SiTailwindcss, SiPostman, SiCplusplus, SiC } from 'react-icons/si';
 import { DiGithubBadge } from 'react-icons/di';
 
 export const menuData = [
   {
     name: 'Home',
-    link: '/'
+    link: '/#hero'
   },
- 
   {
     name: 'About',
-    link: '/about'
+    link: '/#about'
   },
-   {
+  {
+    name: 'Education',
+    link: '/#education'
+  },
+  {
+    name: 'Experience',
+    link: '/#experience'
+  },
+  {
     name: 'Projects',
-    link: '/#work'
+    link: '/#projects'
   },
   {
     name: 'Contact',
@@ -122,3 +129,55 @@ export const achievements = [
 
 // Empty comments array to prevent build errors (section removed from site)
 export const comments: any[] = [];
+
+// Work Experience data
+export const workExperience = [
+  {
+    Company_name: 'OWASP Student Chapter',
+    Desc: 'Core Member & Technical Coordinator',
+    startYear: 'Aug 2024',
+    endYear: 'Current',
+    responsibilities: [
+      'Launched the official HACKOWASP 8.0 website using the MERN stack',
+      'Coordinated technical operations for the XPLOIT CTF platform',
+      'Managed sponsor outreach, social media promotion, and cybersecurity events',
+      'Designed UI mockups and digital assets using Figma'
+    ]
+  },
+  {
+    Company_name: 'Thapar Mathematical Society',
+    Desc: 'Event Management Team Member',
+    startYear: 'Dec 2024',
+    endYear: 'Jan 2025',
+    responsibilities: [
+      'Coordinated logistics for Shoonya 5.0',
+      'Hosted stage sessions and audience engagement activities',
+      'Created presentation decks and promotional visuals'
+    ]
+  }
+];
+
+// Education data
+export const education = {
+  institution: 'Thapar Institute of Engineering & Technology',
+  degree: 'Bachelor of Engineering in Computer Engineering',
+  duration: 'Aug 2024 – May 2028',
+  cgpa: '9.04',
+  coursework: [
+    'Data Structures & Algorithms',
+    'Operating Systems',
+    'Object-Oriented Programming',
+    'Database Management Systems',
+    'Computer Networks',
+    'Discrete Mathematics',
+    'Differential Equations & Linear Algebra',
+    'Numerical Linear Algebra'
+  ]
+};
+
+// About Me data
+export const aboutMe = {
+  introduction: "I'm a Computer Engineering undergraduate at Thapar Institute of Engineering & Technology with a CGPA of 9.04. I'm passionate about full-stack development, cybersecurity, and building scalable web applications.",
+  focus: "I have experience developing MERN stack solutions, organizing cybersecurity competitions, and contributing to technical communities through OWASP and student-led initiatives. I love learning new technologies and solving complex problems through code.",
+  currentlyWorking: "Building innovative solutions and exploring cutting-edge technologies in web development and cybersecurity."
+};

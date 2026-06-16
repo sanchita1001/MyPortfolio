@@ -16,7 +16,7 @@ import { projects } from '@/data/index';
 
 const Work = () => {
   return (
-    <section id="work" className="mt-28">
+    <section id="projects" className="mt-28">
       <Title title="Projects" />
 
       <div className="slider mt-12 md:mt-24 ">
@@ -59,7 +59,6 @@ const Work = () => {
           {projects?.map((project: any, index: number) => (
             <SwiperSlide key={index}>
               <ProjectCard
-                image={null}
                 title={project.name}
                 description={project.desc}
                 link={project.web}

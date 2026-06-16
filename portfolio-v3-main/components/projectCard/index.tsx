@@ -1,5 +1,4 @@
-import React, { useState, MouseEvent, useCallback } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { BsArrowUpRightCircle } from 'react-icons/bs';
@@ -8,29 +7,12 @@ import { FaGithub } from 'react-icons/fa';
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: any;
   link: string;
   github: string;
-  category?: string;
   tech?: string[];
 }
 
-function throttle<T extends (...args: any[]) => any>(
-  func: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-  let lastCall = 0;
-  return (...args: Parameters<T>) => {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) {
-      return;
-    }
-    lastCall = now;
-    return func(...args);
-  };
-}
-
-function Effect({ mouseX, mouseY, ...gridProps }: any) {
+function Effect({ mouseX, mouseY }: any) {
   let maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
@@ -52,10 +34,8 @@ function Effect({ mouseX, mouseY, ...gridProps }: any) {
 const ProjectCard = ({
   title,
   description,
-  image,
   link,
   github,
-  category,
   tech
 }: ProjectCardProps) => {
   let mouseX = useMotionValue(0);
@@ -67,16 +47,6 @@ const ProjectCard = ({
     mouseY.set(clientY - top);
   }
 
-  const data = {
-    pattern: {
-      y: 16,
-      squares: [
-        [0, 1],
-        [1, 3]
-      ]
-    }
-  };
-
   return (
     <div
       onMouseMove={onMouseMove}
@@ -84,7 +54,7 @@ const ProjectCard = ({
     >
       <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
       <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-      <Effect {...data.pattern} mouseX={mouseX} mouseY={mouseY} />
+      <Effect mouseX={mouseX} mouseY={mouseY} />
       <div className="header flex flex-col gap-7 z-10 flex-grow">
         <div className="title-section flex flex-row justify-between items-start gap-5">
           <div className="title flex flex-col gap-3 flex-grow">

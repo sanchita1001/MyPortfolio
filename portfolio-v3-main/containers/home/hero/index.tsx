@@ -11,7 +11,7 @@ import { AnimatedCursor } from '@/components/Cursor';
 const Hero = () => {
   return (
     <React.Fragment>
-     <div className="max-w-[1800px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row">
+     <div id="hero" className="max-w-[1800px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row">
         <motion.div
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
