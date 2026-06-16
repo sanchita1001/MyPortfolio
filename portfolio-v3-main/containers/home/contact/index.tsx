@@ -23,7 +23,7 @@ const Contact = () => {
     },
     {
       icon: FaInstagram,
-      link: 'https://instagram.com/sanchita._.jain',
+      link: 'https://instagram.com/sanchitajain1001',
       label: 'Instagram',
     },
     {
