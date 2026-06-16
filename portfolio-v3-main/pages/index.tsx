@@ -8,7 +8,7 @@ import Contact from '@/containers/home/contact';
 
 export default function Home() {
   return (
-    <main className="max-w-[2200px] mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <main className="max-w-[2200px] mx-auto w-full px-5 sm:px-10 lg:px-20 flex flex-col gap-32 md:gap-48 py-10">
       <Hero />
       <About />
       <Education />

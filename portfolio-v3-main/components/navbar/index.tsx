@@ -38,20 +38,20 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <nav className="px-5 md:px-0 lg:px-0 w-full py-2 mt-5 flex flex-row justify-between items-center sticky top-0 z-50 bg-white dark:bg-[#121212] bg-opacity-60 ">
+    <nav className="px-5 md:px-12 lg:px-24 w-full py-4 flex flex-row justify-between items-center sticky top-0 z-50 bg-white/70 dark:bg-[#121212]/70 backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50 shadow-sm transition-all duration-300">
       <Link href="/">
-        <div className="logo">
+        <div className="logo hover:scale-105 transition-transform">
           <span
             className={` ${
               currentTheme === 'dark' ? 'text-white' : 'text-textPrimary '
-            } text-3xl font-bold`}
+            } text-4xl font-bold tracking-tighter`}
           >
             SJ
           </span>
         </div>
       </Link>
-      <menu className="nav-links bg-white py-3 px-10 rounded-full  border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-lg">
-        <ul className="flex gap-5 text-textPrimary dark:text-white text-md cursor-pointer px-5 ">
+      <menu className="nav-links bg-white py-4 px-12 rounded-full border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-xl">
+        <ul className="flex gap-8 text-textPrimary dark:text-white text-lg cursor-pointer px-2 ">
           {menuData.map((item: any, index: number) => {
             const isSelected = item.name === selectedLink;
             const isHomeOrHash = item.link === '/' || item.link.startsWith('/#');

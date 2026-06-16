@@ -10,7 +10,7 @@ const Education = () => {
       <Title title="Education" />
 
       <div className="mt-12 md:mt-24">
-        <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8">
+        <InteractiveCard className="p-8 md:p-14 flex flex-col gap-8">
           <div className="z-10">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

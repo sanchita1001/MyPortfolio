@@ -1,8 +1,9 @@
+
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CustomMarquee from '@/components/Marquee';
-import MyImg from '@/assets/images/ascii.png';
 import { motion } from 'framer-motion';
 import { FiDownloadCloud } from 'react-icons/fi';
 import { Meteors } from '@/components/Meteors';
@@ -12,16 +13,30 @@ import { AnimatedCursor } from '@/components/Cursor';
 const Typewriter = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText((prev) => prev + text[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, text]);
+    const handleType = () => {
+      if (!isDeleting) {
+        if (currentIndex < text.length) {
+          setDisplayText((prev) => prev + text[currentIndex]);
+          setCurrentIndex((prev) => prev + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
+      } else {
+        if (currentIndex > 0) {
+          setDisplayText((prev) => prev.slice(0, -1));
+          setCurrentIndex((prev) => prev - 1);
+        } else {
+          setIsDeleting(false);
+        }
+      }
+    };
+
+    const timeout = setTimeout(handleType, isDeleting ? 70 : 150);
+    return () => clearTimeout(timeout);
+  }, [currentIndex, isDeleting, text]);
 
   return (
     <span className="font-bold text-primary titleFont dark:text-white">
@@ -30,7 +45,7 @@ const Typewriter = ({ text }: { text: string }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
-        className="inline-block w-[2px] h-[40px] bg-primary dark:bg-white ml-1 align-middle"
+        className="inline-block w-[2px] h-[35px] md:h-[50px] bg-primary dark:bg-white ml-1 align-middle"
       />
     </span>
   );
@@ -44,7 +59,7 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="group border border-grey-200 dark:border-[#27272a] col-span-2 bg-secondary rounded-3xl p-12 flex flex-col gap-8 row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
+          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-3xl p-8 md:p-12 flex flex-col gap-8 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -67,7 +82,7 @@ const Hero = () => {
           <div className="relative z-10 h-full w-full">
             <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-            <div className="image relative h-[550px] w-full ">
+            <div className="image relative h-[400px] md:h-[550px] w-full ">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ rotate: 180, scale: 1 }}
@@ -79,8 +94,8 @@ const Hero = () => {
                 className="absolute top-5 left-5 z-10"
               >
                 <svg
-                  width="100"
-                  height="100"
+                  width="80"
+                  height="80"
                   viewBox="0 0 200 200"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,9 +131,8 @@ const Hero = () => {
               </motion.div>
               <Image
                 loading="lazy"
-                src={MyImg}
+                src="/profilepic.jpeg"
                 alt="Sanchita Jain"
-                placeholder="blur"
                 className="rounded-2xl object-cover "
                 fill
               />
@@ -130,7 +144,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               className="title mt-5"
             >
-              <h1 className="text-6xl ">
+              <h1 className="text-4xl md:text-6xl ">
                 <span className="font-medium text-textSecondary titleFont">
                   hey, I'm
                 </span>{' '}
@@ -145,22 +159,22 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="contact-info flex flex-col gap-4 text-lg"
+              className="contact-info flex flex-col gap-4 text-base md:text-lg"
             >
               <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-xl">📧</span>
+                <span className="text-lg md:text-xl">📧</span>
                 <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors">sjain7be24@thapar.edu</a>
               </div>
               <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-xl">📱</span>
+                <span className="text-lg md:text-xl">📱</span>
                 <span>+91-7982750061</span>
               </div>
               <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-xl">💼</span>
+                <span className="text-lg md:text-xl">💼</span>
                 <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn Profile</a>
               </div>
               <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-xl">💻</span>
+                <span className="text-lg md:text-xl">💻</span>
                 <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Profile</a>
               </div>
             </motion.div>
@@ -171,7 +185,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-12 flex flex-col row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
+          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-8 md:p-12 flex flex-col row-span-1 lg:row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -276,7 +290,7 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col gap-6 mt-auto">
-                <p className="text-primary font-bold text-5xl md:text-6xl lg:text-7xl dark:text-white leading-tight">
+                <p className="text-3xl md:text-6xl lg:text-7xl font-bold text-primary dark:text-white leading-tight">
                   Computer Engineering Student
                   <br />
                   <span className="text-textSecondary">Full-Stack Developer</span>
@@ -291,7 +305,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[420px] md:h-[420px] lg:h-auto overflow-hidden"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[350px] md:h-[420px] lg:h-auto overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
