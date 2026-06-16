@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Title from '@/components/Title';
 import { useTheme } from 'next-themes';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -10,41 +11,65 @@ const Contact = () => {
       <Title title="Contact" />
 
       <div className="contact_content mt-12 md:mt-24 mb-24 rounded-3xl flex flex-col gap-8 relative ">
-        <h1 className="text-primary text-5xl sm:text-5xl md:text-7xl lg:text-5xl font-bold ">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-primary text-5xl sm:text-5xl md:text-7xl lg:text-7xl font-bold leading-tight"
+        >
           <span className="text-textPrimary dark:text-white font-bold">
             Let's work together on something
           </span>{' '}
-          <span className="titleFont dark:text-white">amazing! </span>
-        </h1>
+          <span className="titleFont dark:text-white underline decoration-[#7043EC] decoration-8 underline-offset-8">amazing! </span>
+        </motion.h1>
 
-        <div className="flex flex-col md:flex-row gap-6">
-          <a
+        <div className="flex flex-col md:flex-row gap-6 mt-8">
+          <motion.a
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             href="mailto:sjain7be24@thapar.edu"
-            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#7043EC] w-96 flex items-center justify-center rounded-xl p-5 hover:bg-[#5c38c7] transition-colors hover:scale-105 transition-transform"
+            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#7043EC] w-full md:w-96 flex items-center justify-center rounded-2xl p-8 hover:bg-[#5c38c7] transition-all shadow-[0_20px_50px_rgba(112,67,236,0.3)]"
           >
             Send an Email
-          </a>
+          </motion.a>
           
-          <a
+          <motion.a
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
             href="https://linkedin.com/in/sanchitajain1001"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#0077B5] w-96 flex items-center justify-center rounded-xl p-5 hover:bg-[#006399] transition-colors hover:scale-105 transition-transform"
+            className="text-white text-2xl sm:text-2xl lg:text-3xl font-bold dark:text-white bg-[#0077B5] w-full md:w-96 flex items-center justify-center rounded-2xl p-8 hover:bg-[#006399] transition-all shadow-[0_20px_50px_rgba(0,119,181,0.3)]"
           >
             Connect on LinkedIn
-          </a>
+          </motion.a>
         </div>
 
-        <div className="contact-details flex flex-col gap-4 mt-6 text-textPrimary text-xl">
-          <p className="flex items-center gap-3">
-            <span className="font-semibold">Phone:</span>
-            <a href="tel:+917982750061" className="hover:text-primary">+91-7982750061</a>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          viewport={{ once: true }}
+          className="contact-details flex flex-col gap-6 mt-12 text-textPrimary text-2xl"
+        >
+          <p className="flex items-center gap-4">
+            <span className="font-semibold text-primary dark:text-white">Phone:</span>
+            <a href="tel:+917982750061" className="hover:text-[#7043EC] transition-colors">+91-7982750061</a>
           </p>
-          <p className="flex items-center gap-3">
-            <span className="font-semibold">GitHub:</span>
-            <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary">github.com/sanchita1001</a>
+          <p className="flex items-center gap-4">
+            <span className="font-semibold text-primary dark:text-white">GitHub:</span>
+            <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-[#7043EC] transition-colors">github.com/sanchita1001</a>
           </p>
-        </div>
+        </motion.div>
 
         <svg
           width="397"

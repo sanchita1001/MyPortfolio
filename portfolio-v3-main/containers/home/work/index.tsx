@@ -13,6 +13,7 @@ import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper';
 
 import { projects } from '@/data/index';
+import { motion } from 'framer-motion';
 
 const Work = () => {
   return (
@@ -51,20 +52,31 @@ const Work = () => {
             },
 
             1900: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 40
+            },
+            2200: {
+              slidesPerView: 3,
+              spaceBetween: 50
             }
           }}
         >
           {projects?.map((project: any, index: number) => (
             <SwiperSlide key={index}>
-              <ProjectCard
-                title={project.name}
-                description={project.desc}
-                link={project.web}
-                github={project.github}
-                tech={project.tech}
-              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <ProjectCard
+                  title={project.name}
+                  description={project.desc}
+                  link={project.web}
+                  github={project.github}
+                  tech={project.tech}
+                />
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -13,33 +13,48 @@ const Education = () => {
         <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8">
           <div className="z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="space-y-8"
             >
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                <div className="flex-grow">
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="flex-grow"
+                >
                   <h3 className="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-4">
                     {education.institution}
                   </h3>
                   <p className="text-2xl text-textPrimary font-medium">
                     {education.degree}
                   </p>
-                </div>
-                <div className="flex flex-col items-start md:items-end gap-2">
-                  <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary/10 dark:bg-white/10 border border-primary/20 dark:border-white/20">
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-start md:items-end gap-2"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary/10 dark:bg-white/10 border border-primary/20 dark:border-white/20"
+                  >
                     <span className="text-2xl">🎓</span>
                     <span className="text-xl font-bold text-primary dark:text-white">
                       CGPA: {education.cgpa}
                     </span>
-                  </div>
+                  </motion.div>
                   <p className="text-lg text-textSecondary mt-2">
                     {education.duration}
                   </p>
-                </div>
+                </motion.div>
               </div>
 
               <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>

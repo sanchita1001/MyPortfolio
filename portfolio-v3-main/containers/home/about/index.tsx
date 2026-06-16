@@ -7,44 +7,46 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <section id="about" className="mt-28">
-      <Title title="About Me" />
+      <div className="z-10">
+        <Title title="About Me" />
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 md:mt-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 md:mt-16">
         {/* Personal Introduction Card */}
-        <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8">
-          <div className="z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8 h-full">
+            <div className="z-10">
               <h3 className="text-4xl font-bold text-primary dark:text-white mb-6">
                 Who I Am
               </h3>
-              <p className="text-xl text-textPrimary leading-relaxed mb-6">
+              <p className="text-2xl text-textPrimary leading-relaxed mb-6">
                 {aboutMe.introduction}
               </p>
-              <p className="text-xl text-textPrimary leading-relaxed">
+              <p className="text-2xl text-textPrimary leading-relaxed">
                 {aboutMe.focus}
               </p>
-            </motion.div>
-          </div>
-        </InteractiveCard>
+            </div>
+          </InteractiveCard>
+        </motion.div>
 
         {/* Currently Working On Card */}
-        <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8">
-          <div className="z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8 h-full">
+            <div className="z-10">
               <h3 className="text-4xl font-bold text-primary dark:text-white mb-6">
                 Currently Working On
               </h3>
-              <p className="text-xl text-textPrimary leading-relaxed mb-8">
+              <p className="text-2xl text-textPrimary leading-relaxed mb-8">
                 {aboutMe.currentlyWorking}
               </p>
               
@@ -53,27 +55,39 @@ const About = () => {
                   Key Interests
                 </h4>
                 <ul className="space-y-3 text-lg text-textPrimary">
-                  <li className="flex items-center gap-3">
+                  <motion.li 
+                    whileHover={{ x: 10 }}
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-2xl">🚀</span>
                     Full-Stack Development
-                  </li>
-                  <li className="flex items-center gap-3">
+                  </motion.li>
+                  <motion.li 
+                    whileHover={{ x: 10 }}
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-2xl">🔐</span>
                     Cybersecurity & CTF Competitions
-                  </li>
-                  <li className="flex items-center gap-3">
+                  </motion.li>
+                  <motion.li 
+                    whileHover={{ x: 10 }}
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-2xl">💡</span>
                     Scalable Web Applications
-                  </li>
-                  <li className="flex items-center gap-3">
+                  </motion.li>
+                  <motion.li 
+                    whileHover={{ x: 10 }}
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-2xl">🎯</span>
                     Technical Community Building
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
-            </motion.div>
-          </div>
-        </InteractiveCard>
+            </div>
+          </InteractiveCard>
+        </motion.div>
 
         {/* Skills Overview Card - Full Width */}
         <InteractiveCard className="lg:col-span-2 p-12 md:p-14 flex flex-col gap-8">

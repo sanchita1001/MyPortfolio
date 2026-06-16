@@ -38,12 +38,34 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ children, className =
   return (
     <div
       onMouseMove={onMouseMove}
-      className={`group cursor-pointer border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl dark:bg-darkBg relative ${className}`}
+      className={`group cursor-pointer border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl dark:bg-darkBg relative overflow-hidden ${className}`}
     >
-      <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-      <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-      <CardEffect mouseX={mouseX} mouseY={mouseY} />
-      {children}
+      <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          style={{
+            background: "conic-gradient(from 0deg, transparent 0deg, #7043EC 90deg, transparent 180deg, #7043EC 270deg, transparent 360deg)",
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
+      </div>
+      <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all pointer-events-none" />
+      
+      <div className="relative z-10 h-full w-full pointer-events-none">
+        <div className="pointer-events-auto h-full w-full">
+          <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+          <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+          <CardEffect mouseX={mouseX} mouseY={mouseY} />
+          {children}
+        </div>
+      </div>
     </div>
   );
 };

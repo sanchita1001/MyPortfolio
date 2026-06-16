@@ -17,10 +17,6 @@ export const menuData = [
     link: '/#education'
   },
   {
-    name: 'Experience',
-    link: '/#experience'
-  },
-  {
     name: 'Projects',
     link: '/#projects'
   },
@@ -129,33 +125,6 @@ export const achievements = [
 
 // Empty comments array to prevent build errors (section removed from site)
 export const comments: any[] = [];
-
-// Work Experience data
-export const workExperience = [
-  {
-    Company_name: 'OWASP Student Chapter',
-    Desc: 'Core Member & Technical Coordinator',
-    startYear: 'Aug 2024',
-    endYear: 'Current',
-    responsibilities: [
-      'Launched the official HACKOWASP 8.0 website using the MERN stack',
-      'Coordinated technical operations for the XPLOIT CTF platform',
-      'Managed sponsor outreach, social media promotion, and cybersecurity events',
-      'Designed UI mockups and digital assets using Figma'
-    ]
-  },
-  {
-    Company_name: 'Thapar Mathematical Society',
-    Desc: 'Event Management Team Member',
-    startYear: 'Dec 2024',
-    endYear: 'Jan 2025',
-    responsibilities: [
-      'Coordinated logistics for Shoonya 5.0',
-      'Hosted stage sessions and audience engagement activities',
-      'Created presentation decks and promotional visuals'
-    ]
-  }
-];
 
 // Education data
 export const education = {
