@@ -45,7 +45,7 @@ const Typewriter = ({ text }: { text: string }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
-        className="inline-block w-[2px] h-[25px] md:h-[35px] lg:h-[50px] bg-primary dark:bg-white ml-1 align-middle"
+        className="inline-block w-[2px] h-[35px] md:h-[50px] bg-primary dark:bg-white ml-1 align-middle"
       />
     </span>
   );
@@ -54,13 +54,12 @@ const Typewriter = ({ text }: { text: string }) => {
 const Hero = () => {
   return (
     <React.Fragment>
-     <div id="hero" className="w-full max-w-full px-4 sm:px-6 md:px-8 lg:max-w-[1100px] mx-auto relative mt-0 grid grid-cols-1 lg:grid-cols-5 gap-5 md:gap-6 lg:gap-8">
-        {/* Profile Card - Full width on mobile, 2 cols on desktop */}
+     <div id="hero" className="max-w-[1100px] mx-auto w-full relative mt-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 grid-rows-3 gap-0 sm:gap-0 md:gap-8 lg:gap-8 grid-flow-row">
         <motion.div
           transition={{ delay: 0.2 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 xl:p-12 flex flex-col gap-4 md:gap-5 lg:gap-8 w-full cursor-pointer dark:bg-darkBg relative overflow-hidden"
+          className="group border border-grey-200 dark:border-[#27272a] col-span-1 lg:col-span-2 bg-secondary rounded-3xl p-8 md:p-12 flex flex-col gap-8 row-span-1 lg:row-span-3 cursor-pointer dark:bg-darkBg relative overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -80,10 +79,10 @@ const Hero = () => {
           </div>
           <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all" />
 
-          <div className="relative z-10 h-full w-full max-w-full">
-            <span className="absolute w-[40%] bottom-0 right-0 h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+          <div className="relative z-10 h-full w-full">
+            <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
-                  <div className="image relative h-[250px] sm:h-[280px] md:h-[350px] lg:h-[450px] xl:h-[550px] w-full max-w-full ">
+            <div className="image relative h-[400px] md:h-[550px] w-full ">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ rotate: 180, scale: 1 }}
@@ -143,9 +142,9 @@ const Hero = () => {
               transition={{ duration: 1.5, delay: 0.2 }}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              className="title mt-2 md:mt-3 lg:mt-5"
+              className="title mt-5"
             >
-              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl ">
+              <h1 className="text-4xl md:text-6xl ">
                 <span className="font-medium text-textSecondary titleFont">
                   hey, I'm
                 </span>{' '}
@@ -154,40 +153,39 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            <hr className="my-2 md:my-3" />
+            <hr />
 
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="contact-info flex flex-col gap-1.5 md:gap-2 lg:gap-3 text-xs md:text-sm"
+              className="contact-info flex flex-col gap-4 text-base md:text-lg"
             >
-              <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-sm md:text-base">📧</span>
-                <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors break-all text-xs sm:text-xs md:text-sm">sjain7be24@thapar.edu</a>
+              <div className="flex items-center gap-3 text-textPrimary">
+                <span className="text-lg md:text-xl">📧</span>
+                <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors">sjain7be24@thapar.edu</a>
               </div>
-              <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-sm md:text-base">📱</span>
-                <span className="text-xs sm:text-xs md:text-sm">+91-7982750061</span>
+              <div className="flex items-center gap-3 text-textPrimary">
+                <span className="text-lg md:text-xl">📱</span>
+                <span>+91-7982750061</span>
               </div>
-              <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-sm md:text-base">💼</span>
-                <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs sm:text-xs md:text-sm truncate">LinkedIn</a>
+              <div className="flex items-center gap-3 text-textPrimary">
+                <span className="text-lg md:text-xl">💼</span>
+                <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn Profile</a>
               </div>
-              <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-sm md:text-base">💻</span>
-                <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs sm:text-xs md:text-sm truncate">GitHub</a>
+              <div className="flex items-center gap-3 text-textPrimary">
+                <span className="text-lg md:text-xl">💻</span>
+                <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Profile</a>
               </div>
             </motion.div>
           </div>
         </motion.div>
         
-        {/* Bio Card - Full width on mobile, 3 cols on desktop */}
         <motion.div
           transition={{ delay: 0.3 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 xl:p-12 flex flex-col w-full dark:bg-darkBg relative overflow-hidden group"
+          className="col-span-1 lg:col-span-3 border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl p-8 md:p-12 flex flex-col row-span-1 lg:row-span-2 mt-5 sm:mt-5 md:mt-0 lg:mt-0 dark:bg-darkBg relative overflow-hidden group"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -207,8 +205,8 @@ const Hero = () => {
           </div>
           <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all" />
 
-          <div className="relative z-10 h-full w-full max-w-full">
-            <div className="dvg-group absolute -z-0 left-0 bottom-0 hidden lg:flex justify-between w-full opacity-30 pointer-events-none">
+          <div className="relative z-10 h-full w-full">
+            <div className="dvg-group absolute -z-0 left-0 bottom-0 hidden md:flex justify-between w-full opacity-30 ">
               <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1034_10)">
                   <mask id="mask0_1034_10" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
@@ -254,45 +252,45 @@ const Hero = () => {
               </svg>
             </div>
 
-            <span className="absolute z-10 w-[40%] bottom-0 right-0 h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+            <span className="absolute z-10 w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
             <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
 
-            <div className="relative z-10 h-full w-full max-w-full flex flex-col gap-4 md:gap-6 lg:gap-8">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4 lg:gap-6">
-                <div className="btn_group flex flex-col sm:flex-row gap-2 md:gap-3 w-full md:w-auto">
+            <div className="relative z-10 h-full w-full flex flex-col gap-10">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="btn_group flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                  <a
   href="/Resume-Sanchita-Jain_.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="cv text-sm md:text-base"
+  className="cv"
 >
-                    <FiDownloadCloud className="text-sm md:text-base lg:text-lg" />
+                    <FiDownloadCloud className="text-xl" />
                     Download CV
                   </a>
-                  <div className="flex gap-2 md:gap-3">
+                  <div className="flex gap-4">
                     <a
                       aria-label="linkedin"
                       href="https://linkedin.com/in/sanchitajain1001"
                       target="_blank"
-                      className="p-2 md:p-3 lg:p-4 bg-white dark:bg-white/10 rounded-lg md:rounded-xl shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+                      className="p-4 bg-white dark:bg-white/10 rounded-2xl shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
                     >
-                      <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-[#0077B5] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-4 1.239-4 4v14c0 2.761 1.239 4 4 4h14c2.762 0 4-1.239 4-4v-14c0-2.761-1.238-4-4-4zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                      <svg className="w-6 h-6 text-[#0077B5] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-4 1.239-4 4v14c0 2.761 1.239 4 4 4h14c2.762 0 4-1.239 4-4v-14c0-2.761-1.238-4-4-4zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                     <a
                       aria-label="github"
                       href="https://github.com/sanchita1001"
                       target="_blank"
-                      className="p-2 md:p-3 lg:p-4 bg-white dark:bg-white/10 rounded-lg md:rounded-xl shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+                      className="p-4 bg-white dark:bg-white/10 rounded-2xl shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
                     >
-                      <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-black dark:text-white fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 3.533 1.305 4.399.997.108-.775.441-1.305.807-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      <svg className="w-6 h-6 text-black dark:text-white fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 3.533 1.305 4.399.997.108-.775.441-1.305.807-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
                   </div>
                 </div>
-                <AnimatedCursor text="Hi" classNameDiv="hidden lg:block" />
+                <AnimatedCursor text="Hi" classNameDiv="relative md:static" />
               </div>
 
-              <div className="flex flex-col gap-3 md:gap-4 mt-auto">
-                <p className="text-sm sm:text-base md:text-xl lg:text-3xl xl:text-5xl 2xl:text-6xl font-bold text-primary dark:text-white leading-tight">
+              <div className="flex flex-col gap-6 mt-auto">
+                <p className="text-3xl md:text-6xl lg:text-7xl font-bold text-primary dark:text-white leading-tight">
                   Computer Engineering Student
                   <br />
                   <span className="text-textSecondary">Full-Stack Developer</span>
@@ -303,12 +301,11 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Skills Card - Full width on mobile, 3 cols on desktop */}
         <motion.div
           transition={{ delay: 0.4 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="col-span-1 lg:col-span-3 bg-secondary dark:bg-darkBg relative group cursor-pointer rounded-2xl md:rounded-3xl p-0 flex-col h-[250px] md:h-[300px] lg:h-auto overflow-hidden w-full"
+          className="flex md:flex bg-secondary dark:bg-darkBg relative group cursor-pointer col-span-1 lg:col-span-3 rounded-3xl p-0 flex-col row-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 h-[350px] md:h-[420px] lg:h-auto overflow-hidden"
         >
           <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
             <motion.div
@@ -328,23 +325,23 @@ const Hero = () => {
           </div>
           <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all" />
 
-          <div className="relative z-10 w-full max-w-full flex flex-col h-full">
-            <div className="w-full flex items-start p-3 md:p-4 lg:p-6 xl:p-8">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-medium">Tools and Tech I daily use</h1>
+          <div className="relative z-10 w-full flex flex-col h-full">
+            <div className="w-full flex items-start p-8">
+              <h1 className="text-3xl md:text-4xl font-medium">Tools and Tech I daily use</h1>
             </div>
 
-            <div className="flex-grow flex flex-col justify-center gap-2 md:gap-3">
+            <div className="flex-grow flex flex-col justify-center gap-4">
               <CustomMarquee direction="right">
-                <div className="flex gap-2 md:gap-3 lg:gap-4 xl:gap-6 last:ml-6">
+                <div className="flex gap-6 last:ml-6">
                   {skills.slice(0, 6).map((skill, index) => (
-                    <div key={index} className="p-1.5 md:p-2 lg:p-3 xl:p-5 rounded-md md:rounded-lg lg:rounded-xl border border-opacity-20 border-blue-500/40"><skill.icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 opacity-50" /></div>
+                    <div key={index} className="p-5 rounded-xl border border-opacity-20 border-blue-500/40"><skill.icon className="w-14 h-14 opacity-50" /></div>
                   ))}
                 </div>
               </CustomMarquee>
               <CustomMarquee direction="left">
-                <div className="flex gap-2 md:gap-3 lg:gap-4 xl:gap-6 last:ml-6">
+                <div className="flex gap-6 last:ml-6">
                   {skills.slice(6, 12).map((skill, index) => (
-                    <div key={index} className="p-1.5 md:p-2 lg:p-3 xl:p-5 rounded-md md:rounded-lg lg:rounded-xl border border-opacity-20 border-blue-500/40 "><skill.icon className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-14 xl:h-14 opacity-50" /></div>
+                    <div key={index} className="p-5 rounded-xl border border-opacity-20 border-blue-500/40 "><skill.icon className="w-14 h-14 opacity-50" /></div>
                   ))}
                 </div>
               </CustomMarquee>
