@@ -67,14 +67,7 @@ const About = () => {
                     Full-Stack Development
                   </motion.li>
 
-                  <motion.li
-                    whileHover={{ x: 5 }}
-                    className="flex items-center gap-2"
-                  >
-                    <span className="text-base">🔐</span>
-                    Cybersecurity & CTF Competitions
-                  </motion.li>
-
+                
                   <motion.li
                     whileHover={{ x: 5 }}
                     className="flex items-center gap-2"

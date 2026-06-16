@@ -330,7 +330,7 @@ const Hero = () => {
               <h1 className="text-xl md:text-2xl font-medium">Tools and Tech I daily use</h1>
             </div>
 
-            <div className="flex-grow flex flex-col justify-center gap-3">
+            <div className="flex-grow flex flex-col justify-center gap-5">
               <CustomMarquee direction="right">
                 <div className="flex gap-6 last:ml-6">
                   {skills.slice(0, 6).map((skill, index) => (
