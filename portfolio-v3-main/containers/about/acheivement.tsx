@@ -3,11 +3,11 @@
 import React from 'react';
 import Title from '@/components/Title';
 import { achievements } from '@/data/index';
-import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { motion, useMotionValue, useMotionTemplate, MotionValue } from 'framer-motion';
 
 interface EffectProps {
-  mouseX: ReturnType<typeof useMotionValue>;
-  mouseY: ReturnType<typeof useMotionValue>;
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
 }
 
 function CursorEffect({ mouseX, mouseY }: EffectProps) {
