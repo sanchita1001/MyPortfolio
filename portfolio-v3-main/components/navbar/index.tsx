@@ -44,14 +44,14 @@ const Navbar = () => {
           <span
             className={` ${
               currentTheme === 'dark' ? 'text-white' : 'text-textPrimary '
-            } text-4xl font-bold tracking-tighter`}
+            } text-3xl font-bold tracking-tighter`}
           >
             SJ
           </span>
         </div>
       </Link>
       <menu className="nav-links bg-white py-4 px-12 rounded-full border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-xl">
-        <ul className="flex gap-8 text-textPrimary dark:text-white text-lg cursor-pointer px-2 ">
+        <ul className="flex gap-8 text-textPrimary dark:text-white text-base cursor-pointer px-2 ">
           {menuData.map((item: any, index: number) => {
             const isSelected = item.name === selectedLink;
             const isHomeOrHash = item.link === '/' || item.link.startsWith('/#');
@@ -202,7 +202,7 @@ const Navbar = () => {
             >
               <motion.ul
                 animate={{ y: 0, opacity: 1 }}
-                className={`flex flex-col gap-5 ${currentTheme === 'dark' ? 'text-white' : 'text-textPrimary '} text-lg cursor-pointer px-0 mt-0`}
+                className={`flex flex-col gap-5 ${currentTheme === 'dark' ? 'text-white' : 'text-textPrimary '} text-base cursor-pointer px-0 mt-0`}
               >
                 {menuData.map((item: any, index: number) => {
                   const isSelected = item.name === selectedLink;

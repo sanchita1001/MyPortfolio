@@ -21,13 +21,13 @@ const About = () => {
         >
           <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8 h-full">
             <div className="z-10">
-              <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-6">
                 Who I Am
               </h3>
-              <p className="text-xl md:text-2xl text-textPrimary leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-textPrimary leading-relaxed mb-6">
                 {aboutMe.introduction}
               </p>
-              <p className="text-xl md:text-2xl text-textPrimary leading-relaxed">
+              <p className="text-base md:text-lg text-textPrimary leading-relaxed">
                 {aboutMe.focus}
               </p>
             </div>
@@ -43,44 +43,44 @@ const About = () => {
         >
           <InteractiveCard className="p-12 md:p-14 flex flex-col gap-8 h-full">
             <div className="z-10">
-              <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-6">
                 Currently Working On
               </h3>
-              <p className="text-xl md:text-2xl text-textPrimary leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-textPrimary leading-relaxed mb-8">
                 {aboutMe.currentlyWorking}
               </p>
               
               <div className="flex flex-col gap-4">
-                <h4 className="text-xl md:text-2xl font-semibold text-primary dark:text-white">
+                <h4 className="text-lg md:text-xl font-semibold text-primary dark:text-white">
                   Key Interests
                 </h4>
-                <ul className="space-y-3 text-base md:text-lg text-textPrimary">
+                <ul className="space-y-3 text-sm md:text-base text-textPrimary">
                   <motion.li 
                     whileHover={{ x: 10 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="text-xl md:text-2xl">🚀</span>
+                    <span className="text-lg md:text-xl">🚀</span>
                     Full-Stack Development
                   </motion.li>
                   <motion.li 
                     whileHover={{ x: 10 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="text-xl md:text-2xl">🔐</span>
+                    <span className="text-lg md:text-xl">🔐</span>
                     Cybersecurity & CTF Competitions
                   </motion.li>
                   <motion.li 
                     whileHover={{ x: 10 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="text-xl md:text-2xl">💡</span>
+                    <span className="text-lg md:text-xl">💡</span>
                     Scalable Web Applications
                   </motion.li>
                   <motion.li 
                     whileHover={{ x: 10 }}
                     className="flex items-center gap-3"
                   >
-                    <span className="text-xl md:text-2xl">🎯</span>
+                    <span className="text-lg md:text-xl">🎯</span>
                     Technical Community Building
                   </motion.li>
                 </ul>
@@ -98,7 +98,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-8">
                 Technical Skills
               </h3>
               

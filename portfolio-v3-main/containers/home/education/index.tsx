@@ -28,10 +28,10 @@ const Education = () => {
                   viewport={{ once: true }}
                   className="flex-grow"
                 >
-                  <h3 className="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-4">
                     {education.institution}
                   </h3>
-                  <p className="text-2xl text-textPrimary font-medium">
+                  <p className="text-lg text-textPrimary font-medium">
                     {education.degree}
                   </p>
                 </motion.div>
@@ -46,12 +46,12 @@ const Education = () => {
                     whileHover={{ scale: 1.05 }}
                     className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary/10 dark:bg-white/10 border border-primary/20 dark:border-white/20"
                   >
-                    <span className="text-2xl">🎓</span>
-                    <span className="text-xl font-bold text-primary dark:text-white">
+                    <span className="text-lg">🎓</span>
+                    <span className="text-base font-bold text-primary dark:text-white">
                       CGPA: {education.cgpa}
                     </span>
                   </motion.div>
-                  <p className="text-lg text-textSecondary mt-2">
+                  <p className="text-sm text-textSecondary mt-2">
                     {education.duration}
                   </p>
                 </motion.div>
@@ -61,7 +61,7 @@ const Education = () => {
 
               {/* Coursework */}
               <div>
-                <h4 className="text-3xl font-semibold text-primary dark:text-white mb-6">
+                <h4 className="text-xl font-semibold text-primary dark:text-white mb-6">
                   Relevant Coursework
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -72,9 +72,9 @@ const Education = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       viewport={{ once: true }}
-                      className="flex items-center gap-3 text-lg text-textPrimary"
+                      className="flex items-center gap-3 text-sm text-textPrimary"
                     >
-                      <span className="text-primary dark:text-white text-xl">•</span>
+                      <span className="text-primary dark:text-white text-base">•</span>
                       <span>{course}</span>
                     </motion.div>
                   ))}
@@ -86,7 +86,7 @@ const Education = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary dark:bg-white"></div>
                   <div className="h-px flex-grow bg-gradient-to-r from-primary/40 to-transparent dark:from-white/40"></div>
-                  <div className="flex gap-8 text-lg text-textSecondary">
+                  <div className="flex gap-8 text-sm text-textSecondary">
                     <span className="font-medium">Started: Aug 2024</span>
                     <span className="font-medium">Expected: May 2028</span>
                   </div>

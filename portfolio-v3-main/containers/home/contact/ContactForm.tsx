@@ -52,7 +52,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="John Doe"
-            className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-lg"
+            className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-base"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -67,7 +67,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="john@example.com"
-            className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-lg"
+            className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-base"
           />
         </div>
       </div>
@@ -84,7 +84,7 @@ const ContactForm = () => {
           value={formData.subject}
           onChange={handleChange}
           placeholder="I want to talk about..."
-          className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-lg"
+          className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-base"
         />
       </div>
 
@@ -100,7 +100,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Hi Sanchita, I'd like to..."
-          className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-lg resize-none"
+          className="p-5 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 focus:border-primary outline-none transition-all text-textPrimary dark:text-white text-base resize-none"
         />
       </div>
 
@@ -109,7 +109,7 @@ const ContactForm = () => {
         whileTap={{ scale: 0.98 }}
         disabled={status === 'sending'}
         type="submit"
-        className={`mt-4 p-6 rounded-2xl text-white text-xl font-bold transition-all shadow-lg ${
+        className={`mt-4 p-6 rounded-2xl text-white text-lg font-bold transition-all shadow-lg ${
           status === 'success' 
           ? 'bg-green-500' 
           : status === 'error' 

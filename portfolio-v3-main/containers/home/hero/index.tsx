@@ -45,7 +45,7 @@ const Typewriter = ({ text }: { text: string }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ repeat: Infinity, duration: 0.8, ease: "easeInOut" }}
-        className="inline-block w-[2px] h-[35px] md:h-[50px] bg-primary dark:bg-white ml-1 align-middle"
+        className="inline-block w-[2px] h-[28px] md:h-[38px] bg-primary dark:bg-white ml-1 align-middle"
       />
     </span>
   );
@@ -144,7 +144,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               className="title mt-5"
             >
-              <h1 className="text-4xl md:text-6xl ">
+              <h1 className="text-3xl md:text-4xl ">
                 <span className="font-medium text-textSecondary titleFont">
                   hey, I'm
                 </span>{' '}
@@ -159,22 +159,22 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="contact-info flex flex-col gap-4 text-base md:text-lg"
+              className="contact-info flex flex-col gap-3 text-sm md:text-base"
             >
-              <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-lg md:text-xl">📧</span>
+              <div className="flex items-center gap-2 text-textPrimary">
+                <span className="text-base md:text-lg">📧</span>
                 <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors">sjain7be24@thapar.edu</a>
               </div>
-              <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-lg md:text-xl">📱</span>
+              <div className="flex items-center gap-2 text-textPrimary">
+                <span className="text-base md:text-lg">📱</span>
                 <span>+91-7982750061</span>
               </div>
-              <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-lg md:text-xl">💼</span>
+              <div className="flex items-center gap-2 text-textPrimary">
+                <span className="text-base md:text-lg">💼</span>
                 <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn Profile</a>
               </div>
-              <div className="flex items-center gap-3 text-textPrimary">
-                <span className="text-lg md:text-xl">💻</span>
+              <div className="flex items-center gap-2 text-textPrimary">
+                <span className="text-base md:text-lg">💻</span>
                 <a href="https://github.com/sanchita1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub Profile</a>
               </div>
             </motion.div>
@@ -290,7 +290,7 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col gap-6 mt-auto">
-                <p className="text-3xl md:text-6xl lg:text-7xl font-bold text-primary dark:text-white leading-tight">
+                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary dark:text-white leading-tight">
                   Computer Engineering Student
                   <br />
                   <span className="text-textSecondary">Full-Stack Developer</span>
@@ -327,7 +327,7 @@ const Hero = () => {
 
           <div className="relative z-10 w-full flex flex-col h-full">
             <div className="w-full flex items-start p-8">
-              <h1 className="text-3xl md:text-4xl font-medium">Tools and Tech I daily use</h1>
+              <h1 className="text-2xl md:text-3xl font-medium">Tools and Tech I daily use</h1>
             </div>
 
             <div className="flex-grow flex flex-col justify-center gap-4">

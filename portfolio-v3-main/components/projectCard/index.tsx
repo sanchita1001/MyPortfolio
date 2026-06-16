@@ -110,7 +110,7 @@ const ProjectCard = ({
           <div className="flex flex-1 flex-col gap-7">
             <div className="flex items-start justify-between gap-5">
               <div className="flex flex-grow flex-col gap-3">
-                <h1 className="text-4xl font-bold text-primary dark:text-white">
+                <h1 className="text-2xl font-bold text-primary dark:text-white">
                   {title}
                 </h1>
               </div>
@@ -123,7 +123,7 @@ const ProjectCard = ({
                     rel="noopener noreferrer"
                     aria-label="Live Project"
                   >
-                    <BsArrowUpRightCircle className="text-4xl text-textPrimary transition-colors md:text-5xl group-hover:text-primary dark:group-hover:text-white" />
+                    <BsArrowUpRightCircle className="text-2xl text-textPrimary transition-colors md:text-3xl group-hover:text-primary dark:group-hover:text-white" />
                   </Link>
                 )}
 
@@ -134,14 +134,14 @@ const ProjectCard = ({
                     rel="noopener noreferrer"
                     aria-label="GitHub Repository"
                   >
-                    <FaGithub className="text-4xl text-textPrimary transition-colors md:text-5xl group-hover:text-primary dark:group-hover:text-white" />
+                    <FaGithub className="text-2xl text-textPrimary transition-colors md:text-3xl group-hover:text-primary dark:group-hover:text-white" />
                   </Link>
                 )}
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-2xl font-medium leading-relaxed text-textPrimary">
+            <p className="text-base font-medium leading-relaxed text-textPrimary">
               {description}
             </p>
 
@@ -151,7 +151,7 @@ const ProjectCard = ({
                 {tech.map((technology) => (
                   <span
                     key={technology}
-                    className="rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-base font-medium text-primary dark:border-white/20 dark:bg-white/10 dark:text-white"
+                    className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary dark:border-white/20 dark:bg-white/10 dark:text-white"
                   >
                     {technology}
                   </span>

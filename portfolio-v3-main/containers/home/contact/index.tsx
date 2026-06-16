@@ -28,7 +28,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-primary text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1]"
+                className="text-primary text-2xl sm:text-3xl md:text-4xl font-bold leading-[1.1]"
               >
                 <span className="text-textPrimary dark:text-white font-bold">
                   Let's work together on something
@@ -49,7 +49,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-semibold text-textSecondary uppercase tracking-widest">Email</span>
-                    <a href="mailto:sanchitajain1001@gmail.com" className="text-lg md:text-xl font-bold text-textPrimary dark:text-white hover:text-primary transition-colors break-all">
+                    <a href="mailto:sanchitajain1001@gmail.com" className="text-base md:text-lg font-bold text-textPrimary dark:text-white hover:text-primary transition-colors break-all">
                       sanchitajain1001@gmail.com
                     </a>
                   </div>
@@ -67,7 +67,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-semibold text-textSecondary uppercase tracking-widest">Phone</span>
-                    <a href="tel:+917982750061" className="text-lg md:text-xl font-bold text-textPrimary dark:text-white hover:text-primary transition-colors">
+                    <a href="tel:+917982750061" className="text-base md:text-lg font-bold text-textPrimary dark:text-white hover:text-primary transition-colors">
                       +91 79827 50061
                     </a>
                   </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-semibold text-textSecondary uppercase tracking-widest">Location</span>
-                    <span className="text-lg md:text-xl font-bold text-textPrimary dark:text-white">
+                    <span className="text-base md:text-lg font-bold text-textPrimary dark:text-white">
                       New Delhi, India
                     </span>
                   </div>
@@ -114,15 +114,15 @@ const Contact = () => {
             <div className="w-full lg:w-3/5">
                <div className="p-8 md:p-12 rounded-[2.5rem] bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 relative overflow-hidden h-full flex flex-col justify-center">
                   <div className="relative z-10">
-                    <h2 className="text-3xl font-bold text-primary dark:text-white mb-6">Send us an email</h2>
-                    <p className="text-lg text-textSecondary dark:text-gray-400 mb-8">
+                    <h2 className="text-2xl font-bold text-primary dark:text-white mb-6">Send us an email</h2>
+                    <p className="text-base text-textSecondary dark:text-gray-400 mb-8">
                       I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
                     </p>
                     <a 
                       href="mailto:sanchitajain1001@gmail.com"
-                      className="inline-flex items-center gap-3 px-8 py-4 bg-[#7043EC] text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-transform text-lg"
+                      className="inline-flex items-center gap-3 px-8 py-4 bg-[#7043EC] text-white font-bold rounded-2xl shadow-lg hover:scale-105 transition-transform text-base"
                     >
-                      <HiOutlineMail className="text-2xl" />
+                      <HiOutlineMail className="text-xl" />
                       Email Me
                     </a>
                   </div>
