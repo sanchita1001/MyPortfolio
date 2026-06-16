@@ -8,13 +8,14 @@ export const menuData = [
     name: 'Home',
     link: '/'
   },
-  {
-    name: 'Projects',
-    link: '/#work'
-  },
+ 
   {
     name: 'About',
     link: '/about'
+  },
+   {
+    name: 'Projects',
+    link: '/#work'
   },
   {
     name: 'Contact',
@@ -100,16 +101,7 @@ export const projects = [
   }
 ];
 
-export const workExperience = [
-  {
-    id: 1,
-    position: 1,
-    Company_name: 'OWASP Student Chapter',
-    Desc: 'Core Member & Technical Coordinator',
-    startYear: 'Aug 2024',
-    endYear: 'Current'
-  }
-];
+
 
 export const achievements = [
   {
