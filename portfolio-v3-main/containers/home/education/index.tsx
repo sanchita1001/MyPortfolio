@@ -48,7 +48,7 @@ const Education = () => {
                   >
                     <span className="text-lg">🎓</span>
                     <span className="text-base font-bold text-primary dark:text-white">
-                      CGPA: {education.cgpa}
+                     
                     </span>
                   </motion.div>
                   <p className="text-sm text-textSecondary mt-2">

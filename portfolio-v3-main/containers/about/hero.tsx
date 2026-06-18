@@ -13,7 +13,7 @@ const AboutHero = () => {
 
           <p className="text-sm md:text-base text-textPrimary leading-relaxed">
             I'm a Computer Engineering undergraduate at Thapar Institute of
-            Engineering & Technology with a CGPA of 9.04. I'm passionate about
+            Engineering & Technology. I'm passionate about
             full-stack development, cybersecurity, and building scalable web
             applications.
 
@@ -45,7 +45,7 @@ const AboutHero = () => {
     </p>
 
     <p className="text-xs text-textSecondary">
-      2024 – 2028 • CGPA 9.04
+      2024 – 2028 
     </p>
   </div>
 

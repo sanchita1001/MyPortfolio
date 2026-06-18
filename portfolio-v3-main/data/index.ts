@@ -135,7 +135,7 @@ export const education = {
   institution: 'Thapar Institute of Engineering & Technology',
   degree: 'Bachelor of Engineering in Computer Engineering',
   duration: 'Aug 2024 – May 2028',
-  cgpa: '9.04',
+ 
   coursework: [
     'Data Structures & Algorithms',
     'Operating Systems',
