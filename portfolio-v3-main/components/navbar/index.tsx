@@ -74,15 +74,41 @@ const Navbar = () => {
   return (
     <nav className="px-5 md:px-12 lg:px-24 w-full py-4 flex flex-row justify-between items-center sticky top-0 z-50 bg-cream/70 dark:bg-[#121212]/70 backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50 shadow-sm transition-all duration-300">
       <Link href="/">
-        <div className="logo hover:scale-105 transition-transform">
-          <span
+        <motion.div 
+          className="logo cursor-pointer"
+          whileHover={{ scale: 1.1, rotate: [0, -5, 5, -5, 0] }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.span
             className={` ${
               currentTheme === 'dark' ? 'text-white' : 'text-textPrimary '
             } text-3xl font-bold tracking-tighter`}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            SJ
-          </span>
-        </div>
+            <motion.span
+              className="inline-block"
+              whileHover={{
+                color: '#7043EC',
+                textShadow: '0 0 20px rgba(112, 67, 236, 0.5)',
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              S
+            </motion.span>
+            <motion.span
+              className="inline-block"
+              whileHover={{
+                color: '#7043EC',
+                textShadow: '0 0 20px rgba(112, 67, 236, 0.5)',
+              }}
+              transition={{ duration: 0.3, delay: 0.05 }}
+            >
+              J
+            </motion.span>
+          </motion.span>
+        </motion.div>
       </Link>
       <menu className="nav-links bg-cream py-4 px-12 rounded-full border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-xl">
         <ul className="flex gap-8 text-textPrimary dark:text-white text-base cursor-pointer px-2 ">

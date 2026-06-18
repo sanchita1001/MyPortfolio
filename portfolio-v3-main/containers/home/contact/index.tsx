@@ -143,10 +143,10 @@ const Contact = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-cream dark:bg-white/5 border border-gray-100 dark:border-gray-800 rounded-xl shadow-md hover:border-primary transition-all group"
+                    className="p-3 bg-cream dark:bg-white/10 border border-gray-100 dark:border-gray-700 rounded-xl shadow-md hover:border-[#7043EC] hover:bg-primary/5 dark:hover:bg-primary/20 transition-all group"
                     aria-label={social.label}
                   >
-                    <social.icon className="text-xl text-textPrimary dark:text-white group-hover:text-primary transition-colors" />
+                    <social.icon className="text-xl text-textPrimary dark:text-white group-hover:text-[#7043EC] dark:group-hover:text-[#7043EC] transition-colors" />
                   </motion.a>
                 ))}
               </div>
