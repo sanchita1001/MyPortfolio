@@ -22,7 +22,7 @@ export const menuData = [
   },
   {
     name: 'Achievements',
-    link: '/about#achievements'
+    link: '/#achievements'
   },
   {
     name: 'Contact',

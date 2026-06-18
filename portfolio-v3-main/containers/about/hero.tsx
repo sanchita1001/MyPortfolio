@@ -6,7 +6,7 @@ const AboutHero = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
 
         {/* About Me Card */}
-        <div className="p-5 md:p-6 rounded-2xl bg-secondary dark:bg-darkBg flex flex-col gap-4">
+        <div className="p-5 md:p-6 rounded-2xl bg-cream dark:bg-darkBg flex flex-col gap-4">
           <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-white">
             <span className="titleFont">About Me</span>
           </h2>
@@ -30,7 +30,7 @@ const AboutHero = () => {
 
         {/* Education Card */}
       {/* Education Card */}
-<div className="p-4 md:p-5 rounded-2xl bg-secondary dark:bg-darkBg flex flex-col gap-3">
+<div className="p-4 md:p-5 rounded-2xl bg-cream dark:bg-darkBg flex flex-col gap-3">
   <h2 className="text-xl md:text-2xl font-bold text-primary dark:text-white">
     <span className="titleFont">Education</span>
   </h2>

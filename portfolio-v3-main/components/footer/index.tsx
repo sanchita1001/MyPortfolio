@@ -4,7 +4,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
 const Footer = () => {
   return (
-    <footer className="py-5 px-5 bg-secondary  dark:bg-darkBg">
+    <footer className="py-5 px-5 bg-cream dark:bg-darkBg">
       <div className="footer_contents flex justify-between">
         <h3 className="font-md text-textPrimary font-medium">
           &copy; {new Date().getFullYear()} Sanchita Jain

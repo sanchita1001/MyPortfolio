@@ -33,12 +33,46 @@ const Navbar = () => {
 
   useEffect(() => {
     setMounted(true); // Ensure the component renders only after the client mounts
+
+    const sections = ['hero', 'about', 'education', 'projects', 'achievements', 'contact'];
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          const menuItem = menuData.find((item: any) => item.link.includes(`#${sectionId}`));
+          if (menuItem) {
+            setSelectedLink(menuItem.name);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) observer.unobserve(element);
+      });
+    };
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <nav className="px-5 md:px-12 lg:px-24 w-full py-4 flex flex-row justify-between items-center sticky top-0 z-50 bg-white/70 dark:bg-[#121212]/70 backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50 shadow-sm transition-all duration-300">
+    <nav className="px-5 md:px-12 lg:px-24 w-full py-4 flex flex-row justify-between items-center sticky top-0 z-50 bg-cream/70 dark:bg-[#121212]/70 backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50 shadow-sm transition-all duration-300">
       <Link href="/">
         <div className="logo hover:scale-105 transition-transform">
           <span
@@ -50,7 +84,7 @@ const Navbar = () => {
           </span>
         </div>
       </Link>
-      <menu className="nav-links bg-white py-4 px-12 rounded-full border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-xl">
+      <menu className="nav-links bg-cream py-4 px-12 rounded-full border border-gray-100 hidden sm:hidden md:hidden lg:block dark:bg-darkBg dark:border-gray-800 shadow-xl">
         <ul className="flex gap-8 text-textPrimary dark:text-white text-base cursor-pointer px-2 ">
           {menuData.map((item: any, index: number) => {
             const isSelected = item.name === selectedLink;
@@ -198,7 +232,7 @@ const Navbar = () => {
             <motion.div
               animate={{ y: 10, opacity: 1 }}
               transition={{ ease: 'easeInOut', duration: 0.2 }}
-              className={`absolute top-12 right-0 px-10 py-5 rounded-md ${currentTheme === 'dark' ? 'bg-black border border-gray-500' : 'bg-white border border-gray-600'}`}
+              className={`absolute top-12 right-0 px-10 py-5 rounded-md ${currentTheme === 'dark' ? 'bg-black border border-gray-500' : 'bg-cream border border-gray-600'}`}
             >
               <motion.ul
                 animate={{ y: 0, opacity: 1 }}

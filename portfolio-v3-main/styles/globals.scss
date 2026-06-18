@@ -12,6 +12,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   letter-spacing: normal;
   font-size: 13px;
+  @apply bg-cream dark:bg-darkBg;
 }
 
 .titleFont {

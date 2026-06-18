@@ -23,7 +23,10 @@ module.exports = withMT({
         secondary: '#fafafa',
         textPrimary: '#747474',
         textSecondary: '#949494',
-        darkBg: '#161616'
+        darkBg: '#161616',
+     
+     
+        cream: '#fdfaf1'
       },
       backgroundImage: {
         hero: "url('../public/hero.png')"

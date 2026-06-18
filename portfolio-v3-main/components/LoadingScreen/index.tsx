@@ -2,7 +2,7 @@ import React from 'react';
 
 const LoadingScreen = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
+    <div className="flex items-center justify-center h-screen bg-cream dark:bg-darkBg">
       <div className="logo">
         <svg
           className="mySvg"

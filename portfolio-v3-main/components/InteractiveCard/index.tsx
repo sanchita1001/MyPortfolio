@@ -38,7 +38,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ children, className =
   return (
     <div
       onMouseMove={onMouseMove}
-      className={`group cursor-pointer border border-grey-200 dark:border-[#27272a] bg-secondary rounded-3xl dark:bg-darkBg relative overflow-hidden ${className}`}
+      className={`group cursor-pointer border border-grey-200 dark:border-[#27272a] bg-cream rounded-3xl dark:bg-darkBg relative overflow-hidden ${className}`}
     >
       <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -56,7 +56,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ children, className =
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
       </div>
-      <div className="absolute inset-[1px] bg-secondary dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all pointer-events-none" />
+      <div className="absolute inset-[1px] bg-cream dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all pointer-events-none" />
       
       <div className="relative z-10 h-full w-full pointer-events-none">
         <div className="pointer-events-auto h-full w-full">

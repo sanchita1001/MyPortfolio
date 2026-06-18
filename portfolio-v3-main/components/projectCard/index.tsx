@@ -74,7 +74,7 @@ const ProjectCard = ({
       onMouseMove={onMouseMove}
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3 }}
-      className="group relative min-h-[520px] cursor-pointer overflow-hidden rounded-3xl border border-gray-200 bg-secondary dark:border-[#27272a] dark:bg-darkBg"
+      className="group relative min-h-[520px] cursor-pointer overflow-hidden rounded-3xl border border-gray-200 bg-cream dark:border-[#27272a] dark:bg-darkBg"
     >
       {/* Animated Border */}
       <div className="absolute inset-[-2px] z-0 overflow-hidden rounded-[inherit] pointer-events-none">
@@ -94,7 +94,7 @@ const ProjectCard = ({
       </div>
 
       {/* Inner Card Layer */}
-      <div className="absolute inset-[1px] z-[1] rounded-[calc(1.5rem-1px)] bg-secondary transition-all pointer-events-none group-hover:inset-[2px] dark:bg-darkBg" />
+      <div className="absolute inset-[1px] z-[1] rounded-[calc(1.5rem-1px)] bg-cream transition-all pointer-events-none group-hover:inset-[2px] dark:bg-darkBg" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-full flex-col p-14 pointer-events-none">

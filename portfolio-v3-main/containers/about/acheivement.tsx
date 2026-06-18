@@ -64,7 +64,7 @@ const Achievement = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
               onMouseMove={onMouseMove}
-              className="group relative border border-grey-200 dark:border-[#27272a] bg-secondary dark:bg-darkBg rounded-2xl p-5 md:p-6 lg:p-8 overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:border-primary/30 dark:hover:border-primary/30"
+              className="group relative border border-grey-200 dark:border-[#27272a] bg-cream dark:bg-darkBg rounded-2xl p-5 md:p-6 lg:p-8 overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:border-primary/30 dark:hover:border-primary/30"
             >
               {/* Animated Border on Hover */}
               <div className="absolute inset-[-2px] rounded-[inherit] z-0 overflow-hidden pointer-events-none">
@@ -86,7 +86,7 @@ const Achievement = () => {
               </div>
 
               {/* Inner Card Layer */}
-              <div className="absolute inset-[1px] z-[1] rounded-[calc(1rem-1px)] bg-secondary transition-all pointer-events-none group-hover:inset-[2px] dark:bg-darkBg" />
+              <div className="absolute inset-[1px] z-[1] rounded-[calc(1rem-1px)] bg-cream transition-all pointer-events-none group-hover:inset-[2px] dark:bg-darkBg" />
 
               {/* Cursor Effect - Mouse Tracking Gradient */}
               <CursorEffect mouseX={mouseX} mouseY={mouseY} />
