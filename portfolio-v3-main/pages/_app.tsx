@@ -6,6 +6,7 @@ import { SessionProvider } from 'next-auth/react';
 import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
 import { ReactQueryClientProvider } from '@/components/ReactQueryClientProvider';
+import SplashCursor from '@/components/SplashCursor';
 
 export default function App({ Component, pageProps, session }: any) {
   return (
@@ -41,6 +42,7 @@ export default function App({ Component, pageProps, session }: any) {
           content="Computer Engineering undergraduate at Thapar Institute passionate about full-stack development, cybersecurity, and building scalable web applications."
         />
       </Head>
+      <SplashCursor />
       <ThemeProvider attribute="class">
         <SessionProvider session={session}>
           <ReactQueryClientProvider>
