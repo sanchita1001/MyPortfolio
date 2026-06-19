@@ -26,11 +26,7 @@ const Contact = () => {
       link: 'https://instagram.com/sanchitajain1001',
       label: 'Instagram',
     },
-    {
-      icon: FaWhatsapp,
-      link: 'https://wa.me/917982750061',
-      label: 'WhatsApp',
-    },
+   
   ];
 
   return (
@@ -96,18 +92,6 @@ const Contact = () => {
                     <HiOutlinePhone className="text-2xl" />
                   </div>
 
-                  <div className="flex flex-col">
-                    <span className="text-xs font-semibold text-textSecondary uppercase tracking-wider">
-                      Phone
-                    </span>
-
-                    <a
-                      href="tel:+917982750061"
-                      className="text-sm md:text-base font-bold text-textPrimary dark:text-white hover:text-primary transition-colors"
-                    >
-                      +91 79827 50061
-                    </a>
-                  </div>
                 </motion.div>
 
                 {/* Location */}

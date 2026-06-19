@@ -165,10 +165,7 @@ const Hero = () => {
                 <span className="text-base">📧</span>
                 <a href="mailto:sjain7be24@thapar.edu" className="hover:text-primary transition-colors text-xs md:text-sm">sjain7be24@thapar.edu</a>
               </div>
-              <div className="flex items-center gap-2 text-textPrimary">
-                <span className="text-base">📱</span>
-                <span className="text-xs md:text-sm">+91-7982750061</span>
-              </div>
+             
               <div className="flex items-center gap-2 text-textPrimary">
                 <span className="text-base">💼</span>
                 <a href="https://linkedin.com/in/sanchitajain1001" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs md:text-sm">LinkedIn Profile</a>
