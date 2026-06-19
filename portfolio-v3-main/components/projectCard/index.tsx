@@ -38,10 +38,10 @@ function Effect({ mouseX, mouseY }: EffectProps) {
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50" />
 
-      <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
-        style={style}
-      />
+   <motion.div
+  className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white via-gray-50 to-white opacity-0 transition duration-300 group-hover:opacity-10"
+  style={style}
+/>
 
       <motion.div
         className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay transition duration-300 group-hover:opacity-100"
