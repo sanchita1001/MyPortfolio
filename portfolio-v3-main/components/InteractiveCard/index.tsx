@@ -8,7 +8,7 @@ interface InteractiveCardProps {
 
 function CardEffect({ mouseX, mouseY }: any) {
   let maskImage = useMotionTemplate`
-  radial-gradient(400px at ${mouseX}px ${mouseY}px,
+  radial-gradient(300px at ${mouseX}px ${mouseY}px,
     white,
     transparent
   )
