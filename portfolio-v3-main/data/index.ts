@@ -150,7 +150,7 @@ export const education = {
 
 // About Me data
 export const aboutMe = {
-  introduction: "I'm a Computer Engineering undergraduate at Thapar Institute of Engineering & Technology with a CGPA of 9.04. I'm passionate about full-stack development, cybersecurity, and building scalable web applications.",
+  introduction: "I'm a Computer Engineering undergraduate at Thapar Institute of Engineering & Technology. I'm passionate about full-stack development, cybersecurity, and building scalable web applications.",
   focus: "I have experience developing MERN stack solutions, organizing cybersecurity competitions, and contributing to technical communities through OWASP and student-led initiatives. I love learning new technologies and solving complex problems through code.",
   currentlyWorking: "Building innovative solutions and exploring cutting-edge technologies in web development and cybersecurity."
 };
