@@ -7,16 +7,21 @@ interface InteractiveCardProps {
 }
 
 function CardEffect({ mouseX, mouseY }: any) {
-  let maskImage = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  let maskImage = useMotionTemplate`
+  radial-gradient(400px at ${mouseX}px ${mouseY}px,
+    white,
+    transparent
+  )
+`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
   return (
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-2xl transition duration-300 [mask-image:linear-gradient(white,transparent)] group-hover:opacity-50"></div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
-        style={style}
-      />
+  className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/5 via-white/10 to-white/5 opacity-0 transition duration-300 group-hover:opacity-100"
+  style={style}
+/>
       <motion.div
         className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay transition duration-300 group-hover:opacity-100"
         style={style}
@@ -56,9 +61,9 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({ children, className =
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
       </div>
-      <div className="absolute inset-[1px] bg-cream dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[1] group-hover:inset-[2px] transition-all pointer-events-none" />
+      <div className="absolute inset-[1px] bg-cream dark:bg-darkBg rounded-[calc(1.5rem-1px)] z-[2] group-hover:inset-[2px] transition-all pointer-events-none" />
       
-      <div className="relative z-10 h-full w-full pointer-events-none">
+      <div className=" z-[3] h-full w-full pointer-events-none">
         <div className="pointer-events-auto h-full w-full">
           <span className="absolute w-[40%] bottom-0 right-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
           <span className="absolute w-px left-0 h-[40%] bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>

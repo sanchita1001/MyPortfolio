@@ -80,19 +80,7 @@ const Contact = () => {
                   </div>
                 </motion.div>
 
-                {/* Phone */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/10 hover:border-primary transition-all group"
-                >
-                  <div className="p-3 bg-primary rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform">
-                    <HiOutlinePhone className="text-2xl" />
-                  </div>
-
-                </motion.div>
+          
 
                 {/* Location */}
                 <motion.div
